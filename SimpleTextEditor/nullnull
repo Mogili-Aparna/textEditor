@@ -1,0 +1,2207 @@
+{
+    "hasMore": false,
+    "items": [
+        {
+            "processDefId": "oracleinternalpcs~OCEWFIntegration!1.1~ApproveOCEAsset",
+            "processName": "ApproveOCEAsset",
+            "application": "oracleinternalpcs",
+            "revision": "1.1",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "ApproveOCEAsset.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEWFIntegration/ApproveOCEAsset",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetRepos",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetType",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#6e8598"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "ApproveOCEAsset",
+            "applicationDisplayName": "OCEWFIntegration",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEWFIntegration!1.1~ApproveOCEAsset/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~AssetCollectionProcess",
+            "processName": "AssetCollectionProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetCollectionProcess.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/AssetCollectionProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/OCEOICProcess!1.13*soa_64a32107-df4e-4ecb-95a1-3ad7bfd09e3b/businessCatalog/BusinessData/AssetDOCollection.xsd",
+                            "name": "assetCollection",
+                            "type": "{http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection}AssetDOCollection",
+                            "schema": {
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection|AssetDOCollection": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection|AssetDOCollection\",\n  \"$name\" : \"AssetDOCollection\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assets\" : {\n      \"$alternative-name\" : \"assets\",\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\"\n      }\n    }\n  },\n  \"$nullable\" : [ \"assets\" ]\n}",
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\",\n  \"$name\" : \"AssetDO\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetLink\" : {\n      \"$alternative-name\" : \"assetLink\",\n      \"type\" : [ \"string\", \"null\" ]\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : [ \"string\", \"null\" ]\n    }\n  },\n  \"$nullable\" : [ \"assetLink\", \"assetName\" ],\n  \"required\" : [ \"assetLink\", \"assetName\" ]\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetCollectionProcess",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~AssetCollectionProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~AssetReview!1.3~AssetCollectionProcess",
+            "processName": "AssetCollectionProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetCollectionProcess.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetReview/AssetCollectionProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/AssetReview!1.3*soa_bc93154d-4ad8-4784-95c8-fa4b5bf71f9a/businessCatalog/BusinessData/AssetDOCollection.xsd",
+                            "name": "assetCollection",
+                            "type": "{http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection}AssetDOCollection",
+                            "schema": {
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection|AssetDOCollection": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection|AssetDOCollection\",\n  \"$name\" : \"AssetDOCollection\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDOCollection\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assets\" : {\n      \"$alternative-name\" : \"assets\",\n      \"type\" : \"array\",\n      \"items\" : {\n        \"$ref\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\"\n      }\n    }\n  },\n  \"$nullable\" : [ \"assets\" ]\n}",
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\",\n  \"$name\" : \"AssetDO\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetLink\" : {\n      \"$alternative-name\" : \"assetLink\",\n      \"type\" : [ \"string\", \"null\" ]\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : [ \"string\", \"null\" ]\n    }\n  },\n  \"$nullable\" : [ \"assetLink\", \"assetName\" ],\n  \"required\" : [ \"assetLink\", \"assetName\" ]\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "AR",
+                "colorCode": "#3f92d0"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetCollectionProcess",
+            "applicationDisplayName": "AssetReview",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~AssetReview!1.3~AssetCollectionProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~AssetMultiStepApproval",
+            "processName": "AssetMultiStepApproval",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetMultiStepApproval.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/AssetMultiStepApproval",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetLink",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetMultiStepApproval",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~AssetMultiStepApproval/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~AssetReview!1.3~AssetMultiStepApproval",
+            "processName": "AssetMultiStepApproval",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetMultiStepApproval.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetReview/AssetMultiStepApproval",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetLink",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "AR",
+                "colorCode": "#3f92d0"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetMultiStepApproval",
+            "applicationDisplayName": "AssetReview",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~AssetReview!1.3~AssetMultiStepApproval/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~AssetReviewForm",
+            "processName": "AssetReviewForm",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "Asset Review(1.13)",
+                    "serviceName": "AssetReviewForm.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/AssetReviewForm",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/OCEOICProcess!1.13*soa_64a32107-df4e-4ecb-95a1-3ad7bfd09e3b/forms/schemas/AssetReviewForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/AssetReviewForm}AssetReviewForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/AssetReviewForm|AssetReviewForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/AssetReviewForm|AssetReviewForm\",\n  \"$name\" : \"AssetReviewForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/AssetReviewForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"additionalComments\" : {\n      \"$alternative-name\" : \"additionalComments\",\n      \"type\" : \"string\"\n    },\n    \"assetLink\" : {\n      \"$alternative-name\" : \"assetLink\",\n      \"type\" : \"string\"\n    },\n    \"link\" : {\n      \"$alternative-name\" : \"link\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetURL\" : {\n      \"$alternative-name\" : \"assetURL\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=AssetReviewForm.service;operation=start;dn=oracleinternalpcs/OCEOICProcess!1.13*soa_64a32107-df4e-4ecb-95a1-3ad7bfd09e3b/AssetReviewForm;formName=AssetReviewForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/AssetReviewForm;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~OCEOICProcess!1.13~AssetReviewForm~298d532d-ada0-44db-abf9-f31e74f2b996~75dae6da-092a-4889-a2a3-be2febe4a542",
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetReviewForm",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~AssetReviewForm/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~AssetReviewMessage",
+            "processName": "AssetReviewMessage",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetReviewMessage.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/AssetReviewMessage",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/OCEOICProcess!1.13*soa_64a32107-df4e-4ecb-95a1-3ad7bfd09e3b/businessCatalog/BusinessData/AssetDO.xsd",
+                            "name": "asset",
+                            "type": "{http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO}AssetDO",
+                            "schema": {
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\",\n  \"$name\" : \"AssetDO\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetLink\" : {\n      \"$alternative-name\" : \"assetLink\",\n      \"type\" : [ \"string\", \"null\" ]\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : [ \"string\", \"null\" ]\n    }\n  },\n  \"$nullable\" : [ \"assetLink\", \"assetName\" ],\n  \"required\" : [ \"assetLink\", \"assetName\" ]\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetReviewMessage",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~AssetReviewMessage/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~AssetReview!1.3~AssetReviewMessage",
+            "processName": "AssetReviewMessage",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "AssetReviewMessage.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetReview/AssetReviewMessage",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/AssetReview!1.3*soa_bc93154d-4ad8-4784-95c8-fa4b5bf71f9a/businessCatalog/BusinessData/AssetDO.xsd",
+                            "name": "asset",
+                            "type": "{http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO}AssetDO",
+                            "schema": {
+                                "E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"E|http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO|AssetDO\",\n  \"$name\" : \"AssetDO\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/bpmobject/BusinessData/AssetDO\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetLink\" : {\n      \"$alternative-name\" : \"assetLink\",\n      \"type\" : [ \"string\", \"null\" ]\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : [ \"string\", \"null\" ]\n    }\n  },\n  \"$nullable\" : [ \"assetLink\", \"assetName\" ],\n  \"required\" : [ \"assetLink\", \"assetName\" ]\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "AR",
+                "colorCode": "#3f92d0"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "AssetReviewMessage",
+            "applicationDisplayName": "AssetReview",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~AssetReview!1.3~AssetReviewMessage/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Document_Upload_test!1.0~DocumentTriggerProcess",
+            "processName": "DocumentTriggerProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "DocumentTriggerProcess.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Document_Upload_test/DocumentTriggerProcess",
+                    "startType": "START_DOCUMENT",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "type",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "startedBy",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "role",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "DU",
+                "colorCode": "#3f92d0"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Document_Trigger_Process",
+            "applicationDisplayName": "Document_Upload_test",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Document_Upload_test!1.0~DocumentTriggerProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~VK_DocumentWorkflow!1.1~DocumentWorkflow",
+            "processName": "DocumentWorkflow",
+            "application": "oracleinternalpcs",
+            "revision": "1.1",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "DocumentWorkflow.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/VK_DocumentWorkflow/DocumentWorkflow",
+                    "startType": "START_DOCUMENT",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "type",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "startedBy",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "role",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "VK",
+                "colorCode": "#FABC39"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Document Workflow",
+            "applicationDisplayName": "VK_DocumentWorkflow",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~VK_DocumentWorkflow!1.1~DocumentWorkflow/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Invoice_Approval_Process!3.0~InvoiceProcess",
+            "processName": "InvoiceProcess",
+            "application": "oracleinternalpcs",
+            "revision": "3.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "InvoiceProcess.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/InvoiceApprovalProcess/InvoiceProcess",
+                    "startType": "START_DOCUMENT",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "type",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "startedBy",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "role",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "IA",
+                "colorCode": "#ed813d"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "InvoiceProcess",
+            "applicationDisplayName": "Invoice Approval Process",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Invoice_Approval_Process!3.0~InvoiceProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~KirtiTestApplication!1.11~KirtiTestProcess1",
+            "processName": "KirtiTestProcess1",
+            "application": "oracleinternalpcs",
+            "revision": "1.11",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "KirtiTestProcess1.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/KirtiTestApplication/KirtiTestProcess1",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "KT",
+                "colorCode": "#00B6D1"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "KirtiTestProcess1",
+            "applicationDisplayName": "KirtiTestApplication",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~KirtiTestApplication!1.11~KirtiTestProcess1/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~KirtiTestApplication!1.11~KirtiTestProcess2",
+            "processName": "KirtiTestProcess2",
+            "application": "oracleinternalpcs",
+            "revision": "1.11",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "KirtiTestProcess2.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/KirtiTestApplication/KirtiTestProcess2",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "AssetID",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "AssetType",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "KT",
+                "colorCode": "#00B6D1"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "KirtiTestProcess2",
+            "applicationDisplayName": "KirtiTestApplication",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~KirtiTestApplication!1.11~KirtiTestProcess2/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~DeepthiOICProcess!1.4~MessageBasedURL",
+            "processName": "MessageBasedURL",
+            "application": "oracleinternalpcs",
+            "revision": "1.4",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "MessageBasedURL.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/DeepthiOICProcess/MessageBasedURL",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetLink",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetURL",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetImage",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "DO",
+                "colorCode": "#00B6D1"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "MessageBasedURL",
+            "applicationDisplayName": "DeepthiOICProcess",
+            "applicationDescription": "OIC Process for testing",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~DeepthiOICProcess!1.4~MessageBasedURL/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~MultipleUserApproval",
+            "processName": "MultipleUserApproval",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "MultipleUserApproval.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/MultipleUserApproval",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetLink",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "additionalComments",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "MultipleUserApproval",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~MultipleUserApproval/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCE-OIC-Sample!1.0~OCEAssetWF",
+            "processName": "OCEAssetWF",
+            "application": "oracleinternalpcs",
+            "revision": "1.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "OCEAssetWF.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICSample/OCEAssetWF",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#1FB4AD"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "OCEAssetWF",
+            "applicationDisplayName": "OCE-OIC-Sample",
+            "applicationDescription": "OCE-OIC-Sample",
+            "processDescription": "OCEAssetWF",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCE-OIC-Sample!1.0~OCEAssetWF/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCE-OIC!1.0~OCEOICProcess1",
+            "processName": "OCEOICProcess1",
+            "application": "oracleinternalpcs",
+            "revision": "1.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "OCEOICProcess1.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOIC/OCEOICProcess1",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "AssetID",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "AssetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "RepositoryName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#ed813d"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "OCE-OIC-Process1",
+            "applicationDisplayName": "OCE-OIC",
+            "applicationDescription": "OCE-OIC Application",
+            "processDescription": "OCE-OIC-Process1",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCE-OIC!1.0~OCEOICProcess1/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~VinodApplication!1.0~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "1.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "Process.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/VinodApplication/Process",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "VA",
+                "colorCode": "#FABC39"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "VinodApplication",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~VinodApplication!1.0~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Application2!3.3~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "3.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "StartForm(3.3)",
+                    "serviceName": "Process.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Application2/Process",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/Application2!3.3*soa_40ac59c7-05d8-4a1b-8fb9-21aa5e3c5254/forms/schemas/WebForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/WebForm}WebForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm\",\n  \"$name\" : \"WebForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/WebForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetRepos\" : {\n      \"$alternative-name\" : \"assetRepos\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetType\" : {\n      \"$alternative-name\" : \"assetType\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=Process.service;operation=startEvent;dn=oracleinternalpcs/Application2!3.3*soa_40ac59c7-05d8-4a1b-8fb9-21aa5e3c5254/Process;formName=WebForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Application2/Process;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~Application2!3.3~Process~c632b023-a637-4ec5-8419-d7fcab6cc48c~fff4d4d3-da54-448c-9644-8b0744b1bc6e",
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "A",
+                "colorCode": "#81BB5F"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "Application2",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Application2!3.3~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~My_OCE_Template!2.2~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "2.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "StartForm(2.2)",
+                    "serviceName": "Process.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/MyOCETemplate/Process",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/My_OCE_Template!2.2*soa_29f5be5d-2468-4ad6-bc3b-4f638ffe22f2/forms/schemas/WebForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/WebForm}WebForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm\",\n  \"$name\" : \"WebForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/WebForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetRepos\" : {\n      \"$alternative-name\" : \"assetRepos\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetType\" : {\n      \"$alternative-name\" : \"assetType\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=Process.service;operation=startEvent;dn=oracleinternalpcs/My_OCE_Template!2.2*soa_29f5be5d-2468-4ad6-bc3b-4f638ffe22f2/Process;formName=WebForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/MyOCETemplate/Process;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~My_OCE_Template!2.2~Process~c632b023-a637-4ec5-8419-d7fcab6cc48c~fff4d4d3-da54-448c-9644-8b0744b1bc6e",
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "MO",
+                "colorCode": "#ed813d"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "My OCE Template",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~My_OCE_Template!2.2~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~AssetProcess!1.5~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "1.5",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "Process.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetProcess/Process",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetRepos",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetType",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "AP",
+                "colorCode": "#00B6D1"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "AssetProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~AssetProcess!1.5~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~DocumentApplication!1.2~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "1.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "Process.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/DocumentApplication/Process",
+                    "startType": "START_DOCUMENT",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "type",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "startedBy",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "role",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "DA",
+                "colorCode": "#EB5B60"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "DocumentApplication",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~DocumentApplication!1.2~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Application1!1.2~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "1.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "StartForm(1.2)",
+                    "serviceName": "Process.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Application1/Process",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/Application1!1.2*soa_8b438b5a-4302-4133-9a2a-f7d7ca568ce7/forms/schemas/WebForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/WebForm}WebForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm\",\n  \"$name\" : \"WebForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/WebForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetRepos\" : {\n      \"$alternative-name\" : \"assetRepos\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetType\" : {\n      \"$alternative-name\" : \"assetType\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=Process.service;operation=startEvent;dn=oracleinternalpcs/Application1!1.2*soa_8b438b5a-4302-4133-9a2a-f7d7ca568ce7/Process;formName=WebForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Application1/Process;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~Application1!1.2~Process~c632b023-a637-4ec5-8419-d7fcab6cc48c~fff4d4d3-da54-448c-9644-8b0744b1bc6e",
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "A",
+                "colorCode": "#E85E93"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "Application1",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Application1!1.2~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCE_Template_App!2.2~Process",
+            "processName": "Process",
+            "application": "oracleinternalpcs",
+            "revision": "2.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "StartForm(2.2)",
+                    "serviceName": "Process.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCETemplateApp/Process",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/OCE_Template_App!2.2*soa_d5ddbcab-5d7b-447e-bb1d-2b1691f3f3d6/forms/schemas/WebForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/WebForm}WebForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/WebForm|WebForm\",\n  \"$name\" : \"WebForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/WebForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetRepos\" : {\n      \"$alternative-name\" : \"assetRepos\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetType\" : {\n      \"$alternative-name\" : \"assetType\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=Process.service;operation=startEvent;dn=oracleinternalpcs/OCE_Template_App!2.2*soa_d5ddbcab-5d7b-447e-bb1d-2b1691f3f3d6/Process;formName=WebForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCETemplateApp/Process;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~OCE_Template_App!2.2~Process~c632b023-a637-4ec5-8419-d7fcab6cc48c~fff4d4d3-da54-448c-9644-8b0744b1bc6e",
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#45ac62"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process",
+            "applicationDisplayName": "OCE Template App",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCE_Template_App!2.2~Process/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~DocumentApplication!1.2~Process1",
+            "processName": "Process1",
+            "application": "oracleinternalpcs",
+            "revision": "1.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "Process1.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/DocumentApplication/Process1",
+                    "startType": "START_FOLDER",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "type",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "startedBy",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "role",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "DA",
+                "colorCode": "#EB5B60"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process1",
+            "applicationDisplayName": "DocumentApplication",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~DocumentApplication!1.2~Process1/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~AssetProcess!1.5~Process1",
+            "processName": "Process1",
+            "application": "oracleinternalpcs",
+            "revision": "1.5",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "Submit Asset(1.5)",
+                    "serviceName": "Process1.service",
+                    "operation": "startEvent",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetProcess/Process1",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/AssetProcess!1.5*soa_7b9ad799-66fd-4bcf-a74e-7c983542669d/forms/schemas/AssetForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/AssetForm}AssetForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/AssetForm|AssetForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/AssetForm|AssetForm\",\n  \"$name\" : \"AssetForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/AssetForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"assetRepos\" : {\n      \"$alternative-name\" : \"assetRepos\",\n      \"type\" : \"string\"\n    },\n    \"assetName\" : {\n      \"$alternative-name\" : \"assetName\",\n      \"type\" : \"string\"\n    },\n    \"assetType\" : {\n      \"$alternative-name\" : \"assetType\",\n      \"type\" : \"string\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=Process1.service;operation=startEvent;dn=oracleinternalpcs/AssetProcess!1.5*soa_7b9ad799-66fd-4bcf-a74e-7c983542669d/Process1;formName=AssetForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/AssetProcess/Process1;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~AssetProcess!1.5~Process1~a5e34d02-47cf-44b8-99cb-f4f0c9b07a91~4c2451b8-2db5-4a25-a773-7f6141c9943f",
+                    "description": "submit asset",
+                    "activityDisplayName": "Start event"
+                }
+            ],
+            "processIcon": {
+                "initials": "AP",
+                "colorCode": "#00B6D1"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process1",
+            "applicationDisplayName": "AssetProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~AssetProcess!1.5~Process1/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Aparna!1.3~Process2",
+            "processName": "Process2",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "Process2.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Aparna/Process2",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "A",
+                "colorCode": "#DFE146"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Process2",
+            "applicationDisplayName": "Aparna",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Aparna!1.3~Process2/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Dell!1.1~ProcessDell",
+            "processName": "ProcessDell",
+            "application": "oracleinternalpcs",
+            "revision": "1.1",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "ProcessDell.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Dell/ProcessDell",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "D",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "ProcessDell",
+            "applicationDisplayName": "Dell",
+            "applicationDescription": "description_dell",
+            "processDescription": "ProcessDellDescription",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Dell!1.1~ProcessDell/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Aparna!1.3~SampleProcess",
+            "processName": "SampleProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "SampleProcess.service",
+                    "operation": "test",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Aparna/SampleProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetID",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "A",
+                "colorCode": "#DFE146"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "SampleProcess",
+            "applicationDisplayName": "Aparna",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Aparna!1.3~SampleProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~SampleApplication1!1.3~SampleProcess",
+            "processName": "SampleProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "SampleProcess.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/SampleApplication1/SampleProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetRepos",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetType",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "SA",
+                "colorCode": "#ed813d"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "SampleProcess",
+            "applicationDisplayName": "SampleApplication1",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~SampleApplication1!1.3~SampleProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Aparna!1.3~SingleApprover",
+            "processName": "SingleApprover",
+            "application": "oracleinternalpcs",
+            "revision": "1.3",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "SingleApprover.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/Aparna/SingleApprover",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "id",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "name",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "A",
+                "colorCode": "#DFE146"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "SingleApprover",
+            "applicationDisplayName": "Aparna",
+            "applicationDescription": "",
+            "processDescription": "test",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Aparna!1.3~SingleApprover/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~SingleApproverMessage",
+            "processName": "SingleApproverMessage",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "SingleApproverMessage.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/SingleApproverMessage",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetLink",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "additionalComments",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "SingleApproverMessage",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~SingleApproverMessage/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~Travel_Request_Application!1.1~TravelApprovalProcess",
+            "processName": "TravelApprovalProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.1",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": "Submit Travel Request(1.1)",
+                    "serviceName": "TravelApprovalProcess.service",
+                    "operation": "submitTravelRequest",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/TravelRequestApplication/TravelApprovalProcess",
+                    "startType": "START_PCS_FORM",
+                    "category": "",
+                    "args": [
+                        {
+                            "location": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/soa-infra/services/oracleinternalpcs/Travel_Request_Application!1.1*soa_65ea4aaf-f4fe-470f-a240-1e3f3ed1eb6c/forms/schemas/TravelRequestForm.xsd",
+                            "name": "formArg",
+                            "type": "{http://xmlns.oracle.com/bpm/forms/schemas/TravelRequestForm}TravelRequestForm",
+                            "schema": {
+                                "C|http://xmlns.oracle.com/bpm/forms/schemas/TravelRequestForm|TravelRequestForm": "{\n  \"$schema\" : \"http://json-schema.org/draft-04/schema#\",\n  \"$id\" : \"C|http://xmlns.oracle.com/bpm/forms/schemas/TravelRequestForm|TravelRequestForm\",\n  \"$name\" : \"TravelRequestForm\",\n  \"$namespace\" : \"http://xmlns.oracle.com/bpm/forms/schemas/TravelRequestForm\",\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"firstName\" : {\n      \"$alternative-name\" : \"firstName\",\n      \"type\" : \"string\"\n    },\n    \"lastName\" : {\n      \"$alternative-name\" : \"lastName\",\n      \"type\" : \"string\"\n    },\n    \"endDate\" : {\n      \"$alternative-name\" : \"endDate\",\n      \"type\" : \"string\",\n      \"format\" : \"date\"\n    },\n    \"estimatedCost\" : {\n      \"$alternative-name\" : \"estimatedCost\",\n      \"type\" : \"number\",\n      \"format\" : \"double\"\n    },\n    \"justification\" : {\n      \"$alternative-name\" : \"justification\",\n      \"type\" : \"string\"\n    },\n    \"email\" : {\n      \"$alternative-name\" : \"email\",\n      \"type\" : \"string\"\n    },\n    \"startDate\" : {\n      \"$alternative-name\" : \"startDate\",\n      \"type\" : \"string\",\n      \"format\" : \"date\"\n    }\n  }\n}"
+                            },
+                            "primitive": false
+                        }
+                    ],
+                    "formMetadata": "webform://appId=;formId=;oId=;service=TravelApprovalProcess.service;operation=submitTravelRequest;dn=oracleinternalpcs/Travel_Request_Application!1.1*soa_65ea4aaf-f4fe-470f-a240-1e3f3ed1eb6c/TravelApprovalProcess;formName=TravelRequestForm;ns=http://xmlns.oracle.com/bpmn/bpmnCloudProcess/TravelRequestApplication/TravelApprovalProcess;href=https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/webforms/oracleinternalpcs~Travel_Request_Application!1.1~TravelApprovalProcess~43598e04-8cf4-4cc9-aa30-af5403e1f265~8c100085-b00a-434c-b149-1f068f886f65",
+                    "description": null,
+                    "activityDisplayName": "Submit Travel Request"
+                }
+            ],
+            "processIcon": {
+                "initials": "TR",
+                "colorCode": "#ed813d"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "Travel Approval Process",
+            "applicationDisplayName": "Travel Request Application",
+            "applicationDescription": "Application for users to request business travel",
+            "processDescription": "In this process an employee submits a form to request approval to travel. The request is reviewed and then approved, rejected, or an employee is requested to resubmit.",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~Travel_Request_Application!1.1~TravelApprovalProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~WCS_PCS!2.2~WCSPCSWorkflow",
+            "processName": "WCSPCSWorkflow",
+            "application": "oracleinternalpcs",
+            "revision": "2.2",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "WCSPCSWorkflow.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/WCS_PCS/WCSPCSWorkflow",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetID",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "repoName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "WC",
+                "colorCode": "#3f92d0"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "WCS_PCS_Workflow",
+            "applicationDisplayName": "WCS_PCS",
+            "applicationDescription": "",
+            "processDescription": "WCS_PCS_Workflow",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~WCS_PCS!2.2~WCSPCSWorkflow/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~OCEOICProcess!1.13~WCSitesSampleProcess",
+            "processName": "WCSitesSampleProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.13",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "WCSitesSampleProcess.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/OCEOICProcess/WCSitesSampleProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Receive Message"
+                }
+            ],
+            "processIcon": {
+                "initials": "OC",
+                "colorCode": "#c778ce"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "WCSitesSampleProcess",
+            "applicationDisplayName": "OCEOICProcess",
+            "applicationDescription": "",
+            "processDescription": "Just testing a simple integration to it works well",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~OCEOICProcess!1.13~WCSitesSampleProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        },
+        {
+            "processDefId": "oracleinternalpcs~WFTestApplication1!1.0~WorkFlowProcess",
+            "processName": "WorkFlowProcess",
+            "application": "oracleinternalpcs",
+            "revision": "1.0",
+            "domain": "oracleinternalpcs",
+            "interfaces": [
+                {
+                    "title": null,
+                    "serviceName": "WorkFlowProcess.service",
+                    "operation": "start",
+                    "operationNameSpace": "http://xmlns.oracle.com/bpmn/bpmnCloudProcess/WFTestApplication1/WorkFlowProcess",
+                    "startType": "NONE",
+                    "category": null,
+                    "args": [
+                        {
+                            "location": null,
+                            "name": "assetName",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetRepos",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        },
+                        {
+                            "location": null,
+                            "name": "assetType",
+                            "type": "{http://www.w3.org/2001/XMLSchema}string",
+                            "schema": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "type": "string"
+                            },
+                            "primitive": true
+                        }
+                    ],
+                    "formMetadata": null,
+                    "description": null,
+                    "activityDisplayName": "Start"
+                }
+            ],
+            "processIcon": {
+                "initials": "WF",
+                "colorCode": "#81BB5F"
+            },
+            "isDocsEnabledFlag": true,
+            "isConversationEnabledFlag": false,
+            "processDisplayName": "WorkFlowProcess",
+            "applicationDisplayName": "WFTestApplication1",
+            "applicationDescription": "",
+            "processDescription": "",
+            "links": [
+                {
+                    "length": 0,
+                    "rel": "processMetadata",
+                    "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions/oracleinternalpcs~WFTestApplication1!1.0~WorkFlowProcess/process-metadata"
+                }
+            ],
+            "defaultVersion": true
+        }
+    ],
+    "links": [
+        {
+            "length": 0,
+            "rel": "canonical",
+            "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions"
+        },
+        {
+            "length": 0,
+            "rel": "self",
+            "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/process-definitions?filterDefaultVersion=true"
+        },
+        {
+            "length": 0,
+            "rel": "parent",
+            "href": "https://icspm-oce0003.integration.ocp.oraclecloud.com:443/bpm/api/4.0/"
+        }
+    ]
